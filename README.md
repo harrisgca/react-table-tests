@@ -5,4 +5,6 @@ tables, and that what differentiates them from one another are the plugins. E.g.
 the sortable table will use a hook as a plugin and as a result of using the hook the columns/rows may have additional properties (e.g. functions()).
 
 I came to the conclusion that it might be better to separate the tables into separate components, e.g. `<TableStandard/>` and `<TableSortable />`,
-instead of trying to pass props to one component and make determinations inside of it, e.g. `<Table isSortable>`.
+instead of trying to pass props to one component and make determinations inside of it, e.g. `<Table isSortable />`.
+
+Something else to take note of is the custom types file I had to place at `src/types/react-table-config.d.ts`. The `@types/react-table` lib needs this, and it needs it at the specific file path.
