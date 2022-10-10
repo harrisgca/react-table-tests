@@ -1,0 +1,36 @@
+.table {
+  border: 1px solid blue;
+  margin: 0 auto;
+}
+.th {
+  background-color: yellow;
+  color: red;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid blue;
+  border-right: 1px solid blue;
+}
+
+.tbody {
+  .tr {
+    border-bottom: 1px solid red;
+    &:last-of-type {
+      border-bottom: none;
+    }
+    &.zebra {
+      &:nth-child(odd) {
+        background-color: white;
+      }
+      &:nth-child(even) {
+        background-color: lightgray;
+      }
+    }
+  }
+  .td {
+    padding: 0.5rem;
+    border-right: 1px solid red;
+    &:last-of-type {
+      border-right: none;
+    }
+  }
+}
